@@ -1,15 +1,15 @@
 /* base design tokens */
 :root {
-  --color-heading: #1f2f2a;
-  --color-text: #2f3f3a;
-  --color-text-muted: #4d5b56;
-  --color-accent: #1e6a55;
-  --color-accent-dark: #17463a;
-  --color-border: rgba(31, 47, 42, 0.14);
-  --color-surface: rgba(255, 255, 255, 0.82);
-  --page-background: #f6f3ee;
-  --shadow-soft: 0 12px 30px rgba(14, 30, 26, 0.08);
-  --shadow-strong: 0 20px 40px rgba(14, 30, 26, 0.16);
+  --color-heading: #1b2b4d;
+  --color-text: #2b3b5c;
+  --color-text-muted: #4b5c7a;
+  --color-accent: #0051af;
+  --color-accent-dark: #003b82;
+  --color-border: rgba(0, 81, 175, 0.16);
+  --color-surface: rgba(255, 255, 255, 0.88);
+  --page-background: #f1f5fb;
+  --shadow-soft: 0 12px 30px rgba(8, 36, 88, 0.08);
+  --shadow-strong: 0 20px 40px rgba(8, 36, 88, 0.18);
   --font-display: 'Spectral', 'Georgia', serif;
   --font-body: 'Work Sans', 'Helvetica Neue', 'Segoe UI', sans-serif;
   --section-gap: 160px;
