@@ -46,9 +46,7 @@
           <div class="visual__glow"></div>
           <div class="visual__grid"></div>
           <div class="visual__emblem">
-            <span>Justice</span>
-            <span>Rights</span>
-            <span>Innovation</span>
+            <img class="visual__logo" src="/ccjpi_logo.png" alt="CCJPI logo" />
           </div>
         </div>
       </div>
