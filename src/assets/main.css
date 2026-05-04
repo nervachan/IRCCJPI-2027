@@ -296,6 +296,92 @@
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
+.section--speakers .section__intro {
+  max-width: 46rem;
+}
+
+.speaker-grid {
+  display: grid;
+  gap: 1.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.speaker-card {
+  background: white;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 81, 175, 0.12);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  display: grid;
+  gap: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.speaker-card:hover,
+.speaker-card:focus-visible {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-strong);
+}
+
+.speaker-media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+}
+
+.speaker-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1);
+  transition: transform 0.4s ease;
+}
+
+.speaker-card:hover .speaker-media img,
+.speaker-card:focus-visible .speaker-media img {
+  transform: scale(1.04);
+}
+
+.speaker-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11, 22, 45, 0.12), rgba(11, 22, 45, 0.82));
+  color: white;
+  display: grid;
+  place-items: end start;
+  padding: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.speaker-card:hover .speaker-overlay,
+.speaker-card:focus-visible .speaker-overlay {
+  opacity: 1;
+}
+
+.speaker-qualification {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.speaker-meta {
+  padding: 1.2rem 1.3rem 1.4rem;
+}
+
+.speaker-meta h3 {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-display);
+  color: var(--color-heading);
+  font-size: 1.1rem;
+}
+
+.speaker-meta p {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
 .card {
   background: white;
   border-radius: 18px;
