@@ -1,12 +1,12 @@
 /* base design tokens */
 :root {
-  --color-heading: #1b2b4d;
-  --color-text: #2b3b5c;
-  --color-text-muted: #4b5c7a;
+  --color-heading: #101b33;
+  --color-text: #1f2a45;
+  --color-text-muted: #34415f;
   --color-accent: #0051af;
   --color-accent-dark: #003b82;
   --color-border: rgba(0, 81, 175, 0.16);
-  --color-surface: rgba(255, 255, 255, 0.88);
+  --color-surface: #ffffff;
   --page-background: #f1f5fb;
   --shadow-soft: 0 12px 30px rgba(8, 36, 88, 0.08);
   --shadow-strong: 0 20px 40px rgba(8, 36, 88, 0.18);
