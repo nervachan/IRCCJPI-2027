@@ -575,6 +575,127 @@
   box-shadow: var(--shadow-soft);
 }
 
+.submission__cta {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid rgba(0, 81, 175, 0.14);
+  border-radius: 20px;
+  padding: 1.8rem 2rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+}
+
+.modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 22, 42, 0.45);
+}
+
+.modal__panel {
+  position: relative;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: var(--shadow-strong);
+  width: min(640px, 92vw);
+  padding: 2rem;
+  z-index: 1;
+}
+
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.modal__header h3 {
+  font-family: var(--font-display);
+  color: var(--color-heading);
+  margin: 0;
+}
+
+.modal__close {
+  border-radius: 999px;
+  border: 1px solid rgba(0, 81, 175, 0.2);
+  background: #ffffff;
+  padding: 0.35rem 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modal__form {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.modal__form label {
+  display: grid;
+  gap: 0.4rem;
+  font-weight: 600;
+  color: var(--color-heading);
+}
+
+.modal__form input,
+.modal__form select {
+  border-radius: 12px;
+  border: 1px solid rgba(0, 81, 175, 0.18);
+  padding: 0.7rem 0.9rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.modal__helper {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.modal__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.modal__status {
+  margin-top: 0.6rem;
+  font-weight: 600;
+}
+
+.modal__status--error {
+  color: #a1242a;
+}
+
+.modal__status--success {
+  color: #0f6d3f;
+}
+
+.submission__qr {
+  width: min(220px, 100%);
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
+  border: 2px dashed rgba(0, 81, 175, 0.3);
+  display: grid;
+  place-items: center;
+  color: var(--color-text-muted);
+  background: rgba(0, 81, 175, 0.04);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  text-align: center;
+  padding: 1rem;
+}
+
 .submission__table {
   overflow-x: auto;
   border-radius: 16px;
@@ -687,6 +808,10 @@
 
   .submission__hero {
     grid-template-columns: 1.05fr 0.95fr;
+  }
+
+  .submission__cta {
+    grid-template-columns: 1fr auto;
   }
 }
 

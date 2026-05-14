@@ -1,3 +1,81 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const isModalOpen = ref(false)
+const isUploading = ref(false)
+const uploadError = ref('')
+const uploadSuccess = ref('')
+
+const authorName = ref('')
+const authorEmail = ref('')
+const track = ref('')
+const paperTitle = ref('')
+const selectedFile = ref<File | null>(null)
+
+const apiBase = import.meta.env.VITE_UPLOAD_API_BASE || ''
+
+const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScWpBD0dmi5yYmDKZjB0bj94hD6dGa-Eomru-hMd50UFxX6Fg/viewform?usp=publish-editor'
+
+const openForm = () => {
+  window.open(formUrl, '_blank', 'noopener')
+}
+
+const openModal = () => {
+  uploadError.value = ''
+  uploadSuccess.value = ''
+  isModalOpen.value = true
+}
+
+const closeModal = () => {
+  isModalOpen.value = false
+}
+
+const handleFileChange = (event: Event) => {
+  const target = event.target as HTMLInputElement
+  selectedFile.value = target.files?.[0] ?? null
+}
+
+const submitEntry = async () => {
+  uploadError.value = ''
+  uploadSuccess.value = ''
+
+  if (!selectedFile.value) {
+    uploadError.value = 'Please attach a file before submitting.'
+    return
+  }
+
+  isUploading.value = true
+
+  try {
+    const formData = new FormData()
+    formData.append('file', selectedFile.value)
+    formData.append('authorName', authorName.value)
+    formData.append('authorEmail', authorEmail.value)
+    formData.append('track', track.value)
+    formData.append('paperTitle', paperTitle.value)
+
+    const response = await fetch(`${apiBase}/api/uploads`, {
+      method: 'POST',
+      body: formData,
+    })
+
+    const result = await response.json()
+
+    if (!response.ok) {
+      uploadError.value = result.error || 'Upload failed. Please try again.'
+      return
+    }
+
+    uploadSuccess.value = 'Upload complete. We received your submission.'
+    selectedFile.value = null
+  } catch (error) {
+    uploadError.value = 'Upload failed. Please try again.'
+  } finally {
+    isUploading.value = false
+  }
+}
+</script>
+
 <template>
   <div class="page submission">
     <header class="submission__hero">
@@ -10,7 +88,7 @@
         </p>
         <div class="submission__actions">
           <router-link class="btn btn--ghost" to="/">Back to Home</router-link>
-          <a class="btn btn--primary" href="#notify">Get Submission Alerts</a>
+          <a class="btn btn--primary" :href="formUrl" target="_blank" rel="noopener">Submit Now</a>
         </div>
       </div>
       <div class="submission__panel">
@@ -396,24 +474,25 @@
 
       
 
-      <section class="section reveal" id="notify">
+      <section class="section reveal" id="submission">
         <div class="section__intro">
-          <p class="section__eyebrow">Stay Updated</p>
-          <h2>Get notified when submissions open</h2>
+          <p class="section__eyebrow">Submission</p>
+          <h2>Submit your entry</h2>
         </div>
         <div class="section__content">
-          <div class="submission__notify">
+          <div class="submission__cta">
             <div>
-              <h3>Submission portal announcement</h3>
-              <p>
-                We will share the official link, formatting requirements, and submission guidelines
-                in the next conference bulletin.
-              </p>
+              <div class="submission__cta-copy">
+                <h3>Submission portal</h3>
+                <p>
+                  Ready to submit your abstract or poster? Click the button to open the
+                  submission form and upload your file. Accepted formats: PDF
+                </p>
+              </div>
+              <br>
+              <button class="btn btn--primary" type="button" @click="openForm">Submit Now</button>
             </div>
-            <div class="submission__contact">
-              <p class="submission__contact-label">Contact</p>
-              <p>irccjpi2027@rights2life.org</p>
-            </div>
+
           </div>
         </div>
       </section>
