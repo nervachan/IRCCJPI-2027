@@ -1,18 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-
-const isModalOpen = ref(false)
-const isUploading = ref(false)
-const uploadError = ref('')
-const uploadSuccess = ref('')
-
-const authorName = ref('')
-const authorEmail = ref('')
-const track = ref('')
-const paperTitle = ref('')
-const selectedFile = ref<File | null>(null)
-
-const apiBase = import.meta.env.VITE_UPLOAD_API_BASE || ''
 
 const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScWpBD0dmi5yYmDKZjB0bj94hD6dGa-Eomru-hMd50UFxX6Fg/viewform?usp=publish-editor'
 
@@ -20,60 +6,6 @@ const openForm = () => {
   window.open(formUrl, '_blank', 'noopener')
 }
 
-const openModal = () => {
-  uploadError.value = ''
-  uploadSuccess.value = ''
-  isModalOpen.value = true
-}
-
-const closeModal = () => {
-  isModalOpen.value = false
-}
-
-const handleFileChange = (event: Event) => {
-  const target = event.target as HTMLInputElement
-  selectedFile.value = target.files?.[0] ?? null
-}
-
-const submitEntry = async () => {
-  uploadError.value = ''
-  uploadSuccess.value = ''
-
-  if (!selectedFile.value) {
-    uploadError.value = 'Please attach a file before submitting.'
-    return
-  }
-
-  isUploading.value = true
-
-  try {
-    const formData = new FormData()
-    formData.append('file', selectedFile.value)
-    formData.append('authorName', authorName.value)
-    formData.append('authorEmail', authorEmail.value)
-    formData.append('track', track.value)
-    formData.append('paperTitle', paperTitle.value)
-
-    const response = await fetch(`${apiBase}/api/uploads`, {
-      method: 'POST',
-      body: formData,
-    })
-
-    const result = await response.json()
-
-    if (!response.ok) {
-      uploadError.value = result.error || 'Upload failed. Please try again.'
-      return
-    }
-
-    uploadSuccess.value = 'Upload complete. We received your submission.'
-    selectedFile.value = null
-  } catch (error) {
-    uploadError.value = 'Upload failed. Please try again.'
-  } finally {
-    isUploading.value = false
-  }
-}
 </script>
 
 <template>
@@ -83,12 +15,11 @@ const submitEntry = async () => {
         <p class="eyebrow">Call for Abstracts</p>
         <h1>Submit Entries</h1>
         <p class="submission__lead">
-          Abstract submissions for IRCCJPI 2027 will open soon. This page will host the official
+          Abstract submissions for IR3CJPI 2027 will open soon. This page will host the official
           portal and submission resources once the window is announced.
         </p>
         <div class="submission__actions">
           <router-link class="btn btn--ghost" to="/">Back to Home</router-link>
-          <a class="btn btn--primary" :href="formUrl" target="_blank" rel="noopener">Submit Now</a>
         </div>
       </div>
       <div class="submission__panel">
@@ -203,12 +134,12 @@ const submitEntry = async () => {
           <h2 class="submission__heading--spaced"><strong>Required Sections</strong></h2>
           <ul class="submission__list">
             <li>
-              All full papers must follow the IMRAD structure. 
+              All full papers must follow the IMRAD structure.
             </li>
             <li>
               The sections must appear in the following order:
             </li>
-            
+
           </ul>
           <div class="submission__table">
             <table>
@@ -360,119 +291,10 @@ const submitEntry = async () => {
           </div>
           <h2 class="submission__heading--spaced"><strong>Citation and Reference Style (APA 7th Edition)</strong></h2>
           <p>The conference adopts APA 7th Edition as the sole citation and reference style for all submissions. This standard applies to in-text citations, the reference list, and quotations throughout the manuscript. Authors unfamiliar with APA 7th Edition should consult the Publication Manual of the American Psychological Association (7th ed., 2020) or the official APA Style website (https://apastyle.apa.org).</p>
-          
+
         </div>
       </section>
 
-      <section class="section reveal">
-        <h2><strong>Poster Submission</strong></h2>
-          <h3><strong>Format Requirements</strong></h3>
-          <div class="submission__table">
-            <table>
-              <thead>
-                <tr>
-                  <th scope="col">Element</th>
-                  <th scope="col">Specification</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Poster size</td>
-                  <td>A0 portrait (841 x 1189 mm) or 36 x 48 inches</td>
-                </tr>
-                <tr>
-                  <td>Orientation</td>
-                  <td>Portrait only</td>
-                </tr>
-                <tr>
-                  <td>Resolution</td>
-                  <td>Minimum 150 DPI for print; 300 DPI preferred</td>
-                </tr>
-                <tr>
-                  <td>File format</td>
-                  <td>PDF for review; print-ready file submitted upon acceptance</td>
-                </tr>
-                <tr>
-                  <td>Font size</td>
-                  <td>Minimum 24pt body text; 36pt+ for headings</td>
-                </tr>
-                <tr>
-                  <td>Color</td>
-                  <td>Full color permitted; high contrast required for accessibility</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <h3><strong>Required Sections</strong></h3>
-          <ul>
-            <li>Posters must contain all of the following, clearly labeled:</li>
-          </ul>
-          <div class="submission__table">
-            <table>
-              <thead>
-                <tr>
-                  <th scope="col">No.</th>
-                  <th scope="col">Component</th>
-                  <th scope="col">Description</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Title and Authors</td>
-                  <td>
-                    Must be legible from at least 1 meter; include author(s) and institutional
-                    affiliation
-                  </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Background and Rationale</td>
-                  <td>Brief and focused explanation of the research problem</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Objectives / Research Questions</td>
-                  <td>Clearly stated objectives or research questions</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Methodology</td>
-                  <td>Concise description of research design and approach</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>Key Findings / Results</td>
-                  <td>
-                    Present main findings; use visuals such as tables, figures, and charts whenever
-                    possible
-                  </td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>Conclusions / Next Steps</td>
-                  <td>Highlight implications and future directions of the study</td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <td>References</td>
-                  <td>Include selected key references following the APA 7th Edition format</td>
-                </tr>
-                <tr>
-                  <td>8</td>
-                  <td>Contact Information</td>
-                  <td>Provide the author’s email for post-conference communication</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-           <h3><strong>Poster Printing Requirement</strong></h3>
-           <p>All participants assigned to the poster presentation category are required to print and bring their posters on the day of the conference. The poster must follow the prescribed size and formatting guidelines set by the organizers. Failure to present a printed poster may result in disqualification from the presentation session.</p>
-
-      </section>
-
-
-      
 
       <section class="section reveal" id="submission">
         <div class="section__intro">
