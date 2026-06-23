@@ -8,7 +8,7 @@
         <h1>Criminology in an Era of Human Rights Under Pressure</h1>
         <p class="hero__subtitle">
           The International Research Conference on Criminology, Criminal Justice and Policy
-          Innovations 2027 (IR3CPI 2027) convenes scholars, practitioners, and policy leaders to
+          Innovations 2027 (IR3CJPI 2027) convenes scholars, practitioners, and policy leaders to
           examine how justice systems can respond to contemporary threats while remaining firmly
           anchored in human rights principles.
         </p>
@@ -23,7 +23,7 @@
           </div>
           <div>
             <span class="meta__label">Acronym</span>
-            <span class="meta__value">IRC3zJPI 2027</span>
+            <span class="meta__value">IRC3JPI 2027</span>
           </div>
         </div>
         <div class="hero__actions">
@@ -246,7 +246,7 @@
           </div>
           <div class="detail">
             <span class="detail__label">Conference Acronym</span>
-            <span class="detail__value">IR3CPI 2027</span>
+            <span class="detail__value">IR3CJPI 2027</span>
           </div>
         </div>
       </section>
@@ -277,7 +277,7 @@
 
     <footer class="footer reveal" id="contact">
       <div>
-        <h3>IR3CPI 2027</h3>
+        <h3>IR3CJPI 2027</h3>
         <p>
           International Research Conference on Criminology, Criminal Justice and Policy Innovations
         </p>

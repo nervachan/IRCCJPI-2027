@@ -76,7 +76,7 @@
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  font-size: 0.72rem;
+  font-size: 20px;
   color: var(--color-accent);
   font-weight: 600;
   margin-bottom: 0.8rem;
@@ -178,7 +178,7 @@
 }
 
 .visual__frame {
-  width: min(720px, 92vw);
+  width: min(560px, 92vw);
   aspect-ratio: 1 / 1;
   border-radius: 28px;
   border: 1px solid rgba(0, 81, 175, 0.2);
@@ -218,8 +218,8 @@
 }
 
 .visual__logo {
-  width: 600px;
-  height: 600px;
+  width: auto;
+  height: auto;
   max-width: 100%;
   max-height: 100%;
   display: block;
@@ -815,6 +815,51 @@
   }
 }
 
+/* Tablet / small-desktop: remove side gutters and ensure visuals don't overflow */
+@media (max-width: 1024px) {
+  .page {
+    overflow-x: hidden;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .hero,
+  .submission__hero,
+  .section,
+  .footer {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding-top: 3.5rem;
+  }
+
+  .hero__visual {
+    justify-self: center;
+    width: 100%;
+    display: block;
+  }
+
+  .visual__frame {
+    width: min(520px, 86vw);
+    max-width: 86vw;
+  }
+
+  .submission main {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Make tables and wide content wrap naturally on tablets */
+  .submission__table table {
+    min-width: 480px;
+  }
+}
+
 @media (max-width: 720px) {
   .hero {
     padding: 4rem 6vw 3rem;
@@ -841,6 +886,29 @@
 
   .hero__logos img {
     height: 36px;
+  }
+
+  /* Hide the large decorative visual on small screens and constrain sizes */
+  .hero__visual {
+    display: none;
+  }
+
+  .visual__frame {
+    width: 92vw;
+    max-width: 420px;
+  }
+
+  .visual__logo {
+    max-width: 320px;
+  }
+
+  .hero__content {
+    max-width: 100%;
+  }
+
+  /* Allow submission tables to be more flexible on very small screens */
+  .submission__table table {
+    min-width: auto;
   }
 }
 
