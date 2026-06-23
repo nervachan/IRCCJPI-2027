@@ -23,7 +23,7 @@
           </div>
           <div>
             <span class="meta__label">Acronym</span>
-            <span class="meta__value">IRC3JPI 2027</span>
+            <span class="meta__value">IR3CJPI 2027</span>
           </div>
         </div>
         <div class="hero__actions">
