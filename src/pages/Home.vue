@@ -31,10 +31,13 @@
           <a class="btn btn--ghost" href="#subthemes">Explore Sub-themes</a>
         </div>
         <div class="hero__logos" aria-label="Conference organizers">
-          <img src="/ccje_logo.png" alt="CCJE logo" loading="lazy" />
+          <img src="/vlir-uos.png" alt="VLIR-UOS logo" loading="lazy" />
           <img src="/Ghent-University-Logo.png" alt="Ghent University logo" loading="lazy" />
           <img src="/rights2life-logo.png" alt="Rights2Life logo" loading="lazy" />
-          <img src="/vlir-uos.png" alt="VLIR-UOS logo" loading="lazy" />
+          <img src="/ccje_logo.png" alt="CCJE logo" loading="lazy" />
+          <img src="/CHR_Logo.png" alt="CHR logo" loading="lazy" />
+
+
         </div>
         <p class="hero__note">
           Formal academic gathering featuring policy innovation, evidence-based practice, and
