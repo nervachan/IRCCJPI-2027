@@ -158,75 +158,34 @@
           <article class="speaker-card" tabindex="0">
             <div class="speaker-media">
               <img
-                src="https://placehold.co/600x600/png?text=Speaker+Photo"
-                alt="Dr. Alana Reyes"
+                src="/public/c_vandeviewer.jpg"
+                alt="Prof. Dr. Christophe Vandeviver"
                 loading="lazy"
               />
               <div class="speaker-overlay">
-                <p class="speaker-qualification">
-                  PhD, Criminology · Justice Systems Researcher
-                </p>
+
               </div>
             </div>
             <div class="speaker-meta">
-              <h3>Dr. Alana Reyes</h3>
-              <p>University of Manila</p>
+              <h3>Prof. Dr. Christophe Vandeviver</h3>
             </div>
           </article>
           <article class="speaker-card" tabindex="0">
             <div class="speaker-media">
               <img
-                src="https://placehold.co/600x600/png?text=Speaker+Photo"
-                alt="Prof. Julian Santos"
+                src="/public/d_janssens.jpg"
+                alt="Prof. Dr. Jelle Janssens"
                 loading="lazy"
               />
               <div class="speaker-overlay">
-                <p class="speaker-qualification">
-                  LLM, Human Rights · Policy Innovation Lead
-                </p>
+
               </div>
             </div>
             <div class="speaker-meta">
-              <h3>Prof. Julian Santos</h3>
-              <p>Global Justice Lab</p>
+              <h3>Prof. Dr. Jelle Janssens</h3>
             </div>
           </article>
-          <article class="speaker-card" tabindex="0">
-            <div class="speaker-media">
-              <img
-                src="https://placehold.co/600x600/png?text=Speaker+Photo"
-                alt="Atty. Mira Castillo"
-                loading="lazy"
-              />
-              <div class="speaker-overlay">
-                <p class="speaker-qualification">
-                  JD, Human Rights Law · Regional Justice Advocate
-                </p>
-              </div>
-            </div>
-            <div class="speaker-meta">
-              <h3>Atty. Mira Castillo</h3>
-              <p>Rights2Life Coalition</p>
-            </div>
-          </article>
-          <article class="speaker-card" tabindex="0">
-            <div class="speaker-media">
-              <img
-                src="https://placehold.co/600x600/png?text=Speaker+Photo"
-                alt="Dr. Tomas Velasco"
-                loading="lazy"
-              />
-              <div class="speaker-overlay">
-                <p class="speaker-qualification">
-                  PhD, Digital Justice · Cybercrime Policy Fellow
-                </p>
-              </div>
-            </div>
-            <div class="speaker-meta">
-              <h3>Dr. Tomas Velasco</h3>
-              <p>Institute for Policy Futures</p>
-            </div>
-          </article>
+
         </div>
       </section>
 

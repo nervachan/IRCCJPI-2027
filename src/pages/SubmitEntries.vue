@@ -12,10 +12,10 @@ const openForm = () => {
   <div class="page submission">
     <header class="submission__hero">
       <div>
-        <p class="eyebrow">Call for Abstracts</p>
+        <p class="eyebrow">Call for Full Papers</p>
         <h1>Submit Entries</h1>
         <p class="submission__lead">
-          Abstract submissions for IR3CJPI 2027 will open soon. This page will host the official
+          Full paper submissions for IR3CJPI 2027 will open soon. This page will host the official
           portal and submission resources once the window is announced.
         </p>
         <div class="submission__actions">
@@ -27,15 +27,19 @@ const openForm = () => {
         <ul class="submission__timeline">
           <li>
             <span>Opening announcement</span>
-            <strong>To be announced</strong>
+            <strong>June 29, 2026</strong>
           </li>
           <li>
-            <span>Abstract window</span>
-            <strong>To be announced</strong>
+            <span>Full paper window</span>
+            <strong>June 29 - September 25, 2026</strong>
           </li>
           <li>
             <span>Notification of acceptance</span>
-            <strong>To be announced</strong>
+            <strong>First week of November 2026</strong>
+          </li>
+          <li>
+            <span>End of Registration</span>
+            <strong>January 2027</strong>
           </li>
         </ul>
       </div>
@@ -307,7 +311,7 @@ const openForm = () => {
               <div class="submission__cta-copy">
                 <h3>Submission portal</h3>
                 <p>
-                  Ready to submit your abstract or poster? Click the button to open the
+                  Ready to submit your full paper? Click the button to open the
                   submission form and upload your file. Accepted formats: PDF
                 </p>
               </div>
