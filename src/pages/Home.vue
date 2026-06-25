@@ -8,13 +8,14 @@
           IR3CJPI 2027 &mdash; Call for Full Papers Open
         </div>
 
-        <h1>Criminology in an Era of Human Rights Under Pressure</h1>
+        <h1 class="hero__title">International Research Conference on Criminology, Criminal Justice and Policy Innovations</h1>
+
+        <h2 class="hero__theme">Criminology in an Era of Human Rights Under Pressure</h2>
 
         <p class="hero__subtitle">
-          The International Research Conference on Criminology, Criminal Justice and Policy
-          Innovations convenes scholars, practitioners, and policy leaders to examine how justice
-          systems can respond to contemporary threats while remaining firmly anchored in human
-          rights principles.
+          Convening scholars, practitioners, and policy leaders to examine how justice
+          systems can respond to contemporary threats while remaining firmly anchored in
+          human rights principles.
         </p>
 
         <div class="hero__meta">
