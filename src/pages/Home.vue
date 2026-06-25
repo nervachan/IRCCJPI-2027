@@ -42,6 +42,7 @@
           <span class="hero__logos-label">Organized by</span>
           <img src="/vlir-uos.png" alt="VLIR-UOS" loading="lazy" />
           <img src="/Ghent-University-Logo.png" alt="Ghent University" loading="lazy" />
+          <img src="/uc_seal.png" alt="University of the Cordilleras" loading="lazy" />
           <img src="/rights2life-logo.png" alt="Rights2Life" loading="lazy" />
           <img src="/ccje_logo.png" alt="CCJE" loading="lazy" />
           <img src="/CHR_Logo.png" alt="CHR" loading="lazy" />

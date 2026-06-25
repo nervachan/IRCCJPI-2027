@@ -333,18 +333,91 @@
           <p class="section__eyebrow">Portal</p>
           <h2>Submit your entry</h2>
         </div>
-        <div class="submission__cta-box">
-          <div class="submission__cta-copy">
-            <h3>Submission portal</h3>
-            <p>
-              Ready to submit your full paper? Click the button below to open the official
-              submission form and upload your manuscript. Accepted format: <strong>PDF</strong>.
-            </p>
-            <div class="submission__cta-actions">
-              <button class="btn btn--primary" type="button" @click="openForm">
-                Submit Now &rarr;
-              </button>
-              <router-link class="btn btn--ghost" to="/">Back to Home</router-link>
+        <div class="submission__tabs">
+          <div class="submission__tablist" role="tablist" aria-label="Submission options">
+            <button
+              class="submission__tab"
+              :class="{ 'submission__tab--active': activeSubmissionTab === 'author' }"
+              type="button"
+              role="tab"
+              :aria-selected="activeSubmissionTab === 'author'"
+              :tabindex="activeSubmissionTab === 'author' ? 0 : -1"
+              @click="activeSubmissionTab = 'author'"
+            >
+              Author / Researcher
+            </button>
+            <button
+              class="submission__tab"
+              :class="{ 'submission__tab--active': activeSubmissionTab === 'participant' }"
+              type="button"
+              role="tab"
+              :aria-selected="activeSubmissionTab === 'participant'"
+              :tabindex="activeSubmissionTab === 'participant' ? 0 : -1"
+              @click="activeSubmissionTab = 'participant'"
+            >
+              Participant
+            </button>
+          </div>
+
+          <div
+            v-if="activeSubmissionTab === 'author'"
+            class="submission__tab-panel"
+            role="tabpanel"
+          >
+            <div class="submission__cta-box">
+              <div class="submission__cta-copy">
+                <div class="submission__badge">Full Paper Submission</div>
+                <h3>Author / Researcher entry</h3>
+                <p>
+                  Use this option if you are submitting a full paper as an author or researcher.
+                  Please prepare your manuscript in <strong>PDF</strong> format before opening the
+                  Google Form.
+                </p>
+                <ul class="submission__feature-list">
+                  <li>Structured paper submission for the conference review process.</li>
+                  <li>Upload-ready PDF manuscript and contact details.</li>
+                  <li>Best used by authors whose abstracts were already screened.</li>
+                </ul>
+                <div class="submission__cta-actions">
+                  <button class="btn btn--primary" type="button" @click="openForm()">
+                    Open Author Form &rarr;
+                  </button>
+                  <router-link class="btn btn--ghost" to="/">Back to Home</router-link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div v-else class="submission__tab-panel" role="tabpanel">
+            <div class="submission__cta-box submission__cta-box--participant">
+              <div class="submission__cta-copy">
+                <div class="submission__badge">Participation Registration</div>
+                <h3>Participant entry</h3>
+                <p>
+                  This tab is for non-presenting participants. Please check the fee details below
+                  and submit your information through the official Google Form when ready.
+                </p>
+                <div class="submission__fee-card">
+                  <div>
+                    <span class="submission__fee-label">Participation fee</span>
+                    <strong class="submission__fee-value">To be announced</strong>
+                  </div>
+                  <div>
+                    <span class="submission__fee-label">Payment details</span>
+                    <strong class="submission__fee-value">Placeholder for bank / transfer instructions</strong>
+                  </div>
+                  <div>
+                    <span class="submission__fee-label">Reference note</span>
+                    <strong class="submission__fee-value">Official instructions will be posted here</strong>
+                  </div>
+                </div>
+                <div class="submission__cta-actions">
+                  <button class="btn btn--primary" type="button" @click="openForm()">
+                    Open Participant Form &rarr;
+                  </button>
+                  <router-link class="btn btn--ghost" to="/">Back to Home</router-link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -354,10 +427,14 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
+
+const activeSubmissionTab = ref<'author' | 'participant'>('author')
+
 const formUrl =
   'https://docs.google.com/forms/d/e/1FAIpQLScWpBD0dmi5yYmDKZjB0bj94hD6dGa-Eomru-hMd50UFxX6Fg/viewform?usp=publish-editor'
 
-function openForm() {
-  window.open(formUrl, '_blank', 'noopener')
+function openForm(url = formUrl) {
+  window.open(url, '_blank', 'noopener')
 }
 </script>

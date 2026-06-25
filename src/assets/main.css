@@ -325,6 +325,7 @@
   flex-wrap: wrap;
   gap: 1.4rem;
   align-items: center;
+  justify-content: center;
   padding-top: 1.8rem;
   border-top: 1px solid var(--blue-100);
 }
@@ -358,6 +359,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 14rem;
 }
 
 .visual__frame {
@@ -907,6 +909,127 @@
   gap: 0.9rem;
 }
 
+.submission__tabs {
+  display: grid;
+  gap: 1rem;
+}
+
+.submission__tablist {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0.4rem;
+  background: var(--gray-0);
+  border: 1px solid var(--blue-100);
+  border-radius: var(--r-pill);
+  box-shadow: var(--shadow-xs);
+  width: fit-content;
+}
+
+.submission__tab {
+  border: 0;
+  border-radius: var(--r-pill);
+  background: transparent;
+  color: var(--color-text-muted);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 700;
+  padding: 0.85rem 1.25rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.submission__tab:hover {
+  color: var(--blue-700);
+  background: var(--blue-50);
+}
+
+.submission__tab--active {
+  background: var(--blue-600);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(10, 59, 124, 0.22);
+}
+
+.submission__tab-panel {
+  animation: fadeUp 0.45s var(--ease-out);
+}
+
+.submission__cta-box--participant {
+  background: linear-gradient(180deg, var(--gray-0), var(--blue-50));
+}
+
+.submission__badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0.34rem 0.85rem;
+  border-radius: var(--r-pill);
+  background: var(--blue-50);
+  color: var(--blue-700);
+  border: 1px solid var(--blue-100);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+}
+
+.submission__feature-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.submission__feature-list li {
+  position: relative;
+  padding-left: 1.25rem;
+  color: var(--color-text);
+  line-height: 1.65;
+}
+
+.submission__feature-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.58rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--blue-500);
+}
+
+.submission__fee-card {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.2rem;
+  padding: 1.2rem;
+  border-radius: var(--r-lg);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--blue-100);
+}
+
+.submission__fee-card > div {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.submission__fee-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  font-weight: 700;
+}
+
+.submission__fee-value {
+  color: var(--color-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
 /* Timeline panel */
 .timeline-panel {
   background: var(--gray-0);
@@ -1203,6 +1326,14 @@
 
   .submission__hero { padding: 90px 5vw 48px; }
   .submission__actions { flex-direction: column; align-items: stretch; }
+
+  .submission__tablist {
+    width: 100%;
+  }
+
+  .submission__tab {
+    flex: 1 1 100%;
+  }
 
   .cta-band {
     flex-direction: column;
