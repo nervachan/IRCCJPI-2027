@@ -14,7 +14,7 @@
       <li><a href="/#speakers" @click="menuOpen = false">Speakers</a></li>
       <li>
         <router-link class="nav__cta" to="/submit" @click="menuOpen = false">
-          Submit Entry
+          Register Now
         </router-link>
       </li>
     </ul>

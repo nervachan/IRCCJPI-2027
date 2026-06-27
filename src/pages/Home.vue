@@ -2,6 +2,11 @@
   <div class="page">
     <!-- Hero -->
     <header class="hero">
+      <!-- Bas-relief background layer -->
+      <div class="hero__relief-bg" aria-hidden="true">
+        <img src="/relief_bg.jpg" alt="" />
+      </div>
+
       <div class="hero__content reveal">
         <div class="hero__badge">
           <span class="hero__badge-dot"></span>
@@ -49,17 +54,31 @@
         </div>
       </div>
 
+      <!-- Lion statue visual panel -->
       <div class="hero__visual reveal reveal-delay-2" aria-hidden="true">
         <div class="visual__frame">
+          <div class="visual__lion-wrap">
+            <img
+              class="visual__lion-img"
+              src="/lion_statue.jpg"
+              alt="Lion Head landmark of Baguio City"
+              loading="eager"
+            />
+            <div class="visual__lion-fade"></div>
+          </div>
+
           <div class="visual__noise"></div>
           <div class="visual__grid-lines"></div>
+
           <div class="visual__emblem">
             <img class="visual__logo" src="/ccjpi_logo.png" alt="CCJPI logo" />
           </div>
+
           <div class="visual__info">
             <p class="visual__info-title">IR3CJPI 2027</p>
             <p class="visual__info-date">Baguio City &nbsp;&bull;&nbsp; February 2027</p>
           </div>
+
           <div class="visual__chips">
             <span class="visual__chip">Human Rights</span>
             <span class="visual__chip">Criminal Justice</span>
@@ -68,6 +87,22 @@
         </div>
       </div>
     </header>
+
+    <!-- Bas-relief cultural strip -->
+    <div class="relief-strip" aria-hidden="true">
+      <img
+        class="relief-strip__img"
+        src="/relief_bg.jpg"
+        alt="Cordilleran indigenous cultural bas-relief"
+        loading="lazy"
+      />
+      <div class="relief-strip__overlay"></div>
+      <div class="relief-strip__caption">
+        <span class="relief-strip__caption-line"></span>
+        <span class="relief-strip__caption-text">Baguio City, Cordillera &bull; Philippines</span>
+        <span class="relief-strip__caption-line"></span>
+      </div>
+    </div>
 
     <main>
       <!-- Overview -->
@@ -302,3 +337,150 @@
 <script setup lang="ts">
 defineOptions({ name: 'HomePage' })
 </script>
+
+<style scoped>
+/* ─── Hero image integration ─────────────────────────────────────── */
+
+/*
+  Bas-relief background: sits behind hero content as a very subtle
+  texture, faded to ~8% opacity so it never competes with text.
+  The existing hero background color/gradient renders on top via
+  the hero's own background, so this only peeks through if the
+  hero has any transparency.
+*/
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__relief-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero__relief-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  opacity: 0.07;
+  filter: grayscale(1);
+  mix-blend-mode: multiply;
+}
+
+/* Ensure existing hero children stack above the background image */
+.hero__content {
+  position: relative;
+  z-index: 2;
+}
+
+/* ─── Lion statue inside the visual frame ─────────────────────────── */
+
+/*
+  Replaces the abstract noise/emblem placeholder.
+  The lion image fills the visual__frame entirely;
+  the existing .visual__noise, .visual__grid-lines,
+  .visual__emblem, .visual__info, and .visual__chips
+  all overlay it at their normal z-index levels, so
+  nothing from the original component is removed.
+*/
+.visual__frame {
+  position: relative;
+  overflow: hidden;
+}
+
+.visual__lion-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.visual__lion-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  /* Blend into the hero's existing color scheme:
+     desaturate slightly, lower brightness to match
+     the frame's typical dark/muted tone */
+  filter: saturate(0.75) brightness(0.55);
+  mix-blend-mode: luminosity;
+}
+
+/*
+  Gradient fade so the lion blends into the frame edges
+  rather than hard-cropping. Matches whatever edge color
+  the .visual__frame already uses.
+*/
+.visual__lion-fade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, transparent 55%, var(--hero-frame-bg, rgba(0,0,0,0.55)) 100%),
+    linear-gradient(to left,   transparent 65%, var(--hero-frame-bg, rgba(0,0,0,0.35)) 100%),
+    linear-gradient(to top,    transparent 80%, var(--hero-frame-bg, rgba(0,0,0,0.2))  100%);
+}
+
+/* ─── Bas-relief cultural strip ───────────────────────────────────── */
+
+.relief-strip {
+  position: relative;
+  width: 100%;
+  height: 110px;
+  overflow: hidden;
+  /* sits flush between hero and main; inherits page background */
+}
+
+.relief-strip__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
+  /* match the page's existing color scheme:
+     sepia ties the golden tones of the bas-relief to the
+     site's primary accent color; low opacity keeps it subtle */
+  opacity: 0.28;
+  filter: sepia(0.5) saturate(0.8) brightness(0.9);
+}
+
+/* Fade the strip into the sections above and below */
+.relief-strip__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom,
+      var(--hero-bottom-color, #ffffff) 0%,
+      transparent 28%,
+      transparent 72%,
+      var(--section-bg, #ffffff) 100%
+    );
+}
+
+/* Thin caption bar centered over the strip */
+.relief-strip__caption {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.relief-strip__caption-line {
+  display: block;
+  width: 48px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.3;
+}
+
+.relief-strip__caption-text {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.45;
+}
+</style>
