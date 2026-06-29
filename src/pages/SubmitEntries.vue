@@ -286,6 +286,37 @@
         </div>
       </section>
     </main>
+    <footer class="page-footer" id="contact">
+      <div class="footer__inner">
+        <div>
+          <p class="footer__brand-name">Contact Details</p>
+          <p class="footer__brand-desc">
+            vliruos@uc.bcf.edu.ph
+          </p>
+          <p class="footer__brand-desc">
+            (074) 442-3316 loc. 309
+          </p>
+        </div>
+        <div>
+          <p class="footer__brand-name">Visit Us</p>
+            <a href="https://www.facebook.com/profile.php?id=61567354168044" target="_blank" rel="noopener noreferrer"  class="footer__brand-desc">Facebook Page - UC Rights2Life</a>
+          <p class="footer__brand-desc">
+            PJIC, University of the Cordilleras - Legarda Campus, Baguio City, Philippines
+          </p>
+        </div>
+
+        <div class="footer__col">
+          <p class="footer__col-title">Participation</p>
+          <ul>
+            <li><router-link to="/submit">Submit Entry</router-link></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>IR3CJPI 2027 &mdash; University of the Cordilleras, Baguio City, Philippines &bull; February 8&ndash;9, 2027</span>
+        <span>Organized by UC-CCJE, Ghent University &amp; Partners</span>
+      </div>
+    </footer>
   </div>
 </template>
 
