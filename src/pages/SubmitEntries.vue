@@ -263,15 +263,18 @@
                 <div class="submission__fee-card">
                   <div>
                     <span class="submission__fee-label">Participation fee</span>
-                    <strong class="submission__fee-value">To be announced</strong>
+                    <strong class="submission__fee-value">1500 PHP</strong>
                   </div>
                   <div>
                     <span class="submission__fee-label">Payment details</span>
-                    <strong class="submission__fee-value">Placeholder for bank / transfer instructions</strong>
+                    <strong class="submission__fee-value">Bank Name: Bank of the Philippine Islands</strong>
+                    <strong class="submission__fee-value">Address: Session Road, Baguio City</strong>
+                    <strong class="submission__fee-value">Account Name: University of the Cordilleras</strong>
+                    <strong class="submission__fee-value">Account Number: 0571-0214-71</strong>
                   </div>
                   <div>
                     <span class="submission__fee-label">Reference note</span>
-                    <strong class="submission__fee-value">Official instructions will be posted here</strong>
+                    <strong class="submission__fee-value">Once Payment has been deposited, Please do include an image of the proof of payment in the registration form</strong>
                   </div>
                 </div>
                 <div class="submission__cta-actions">
