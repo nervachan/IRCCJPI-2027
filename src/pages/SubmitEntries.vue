@@ -190,6 +190,26 @@
 
       <div class="divider"></div>
 
+      <!-- Download Template -->
+      <section class="section reveal">
+        <div class="section__header">
+          <p class="section__eyebrow">Template</p>
+          <h2>Download full paper template</h2>
+        </div>
+        <div class="prose">
+          <p>
+            You can download the official full paper template in DOCX format here:
+          </p>
+          <p>
+            <a href="/DDT-IR3CJPI_Full-Paper_Template 2.docx" class="btn btn--primary" download>
+              Download Template (.docx)
+            </a>
+          </p>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
       <!-- Submit portal -->
       <section class="section reveal" id="submission">
         <div class="section__header">
@@ -262,8 +282,12 @@
                 </p>
                 <div class="submission__fee-card">
                   <div>
-                    <span class="submission__fee-label">Participation fee</span>
-                    <strong class="submission__fee-value">1500 PHP</strong>
+                    <span class="submission__fee-label">Subsidized Registration</span>
+                    <strong class="submission__fee-value">1500 php / 25usd for first 100 participants</strong>
+                  </div>
+                  <div>
+                    <span class="submission__fee-label">Regular Rate Registration</span>
+                    <strong class="submission__fee-value">3500 php / 60usd for the subsequent participants</strong>
                   </div>
                   <div>
                     <span class="submission__fee-label">Payment details</span>
