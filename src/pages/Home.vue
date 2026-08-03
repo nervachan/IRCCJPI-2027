@@ -41,6 +41,13 @@
         <div class="hero__actions">
           <router-link class="btn btn--primary" to="/submit">Submit Full Paper</router-link>
           <a class="btn btn--ghost" href="#subthemes">Explore Sub-themes</a>
+          <a
+            class="btn btn--ghost"
+            href="/IR3CJPI-2027-Program-Overview.docx"
+            download="IR3CJPI-2027-Program-Overview.docx"
+          >
+            Download Program Overview
+          </a>
         </div>
 
         <div class="hero__logos">
@@ -237,6 +244,60 @@
             <div class="speaker-meta">
               <h3>Prof. Dr. Jelle Janssens</h3>
               <p>Ghent University</p>
+            </div>
+          </article>
+          <article class="speaker-card" tabindex="0">
+            <div class="speaker-media">
+              <img src="/s_maxwell.jpg" alt="Prof. Dr. Sheila Royo-Maxwell" loading="lazy" />
+              <div class="speaker-overlay"></div>
+            </div>
+            <div class="speaker-meta">
+              <h3>Prof. Dr. Sheila Royo-Maxwell</h3>
+              <p>Department of Criminology, School of Criminal Justice - Michigan State University</p>
+            </div>
+          </article>
+
+          <article class="speaker-card" tabindex="0">
+            <div class="speaker-media">
+              <img src="/c_veliko.png" alt="Ms. Cynthia Veliko" loading="lazy" />
+              <div class="speaker-overlay"></div>
+            </div>
+            <div class="speaker-meta">
+              <h3>Ms. Cynthia Veliko</h3>
+              <p>Regional Representative South-East Asia, OHCHR</p>
+            </div>
+          </article>
+
+          <article class="speaker-card" tabindex="0">
+            <div class="speaker-media">
+              <img src="/r_palpal-latoc.jpg" alt="Atty. Richard Paat Palpal-Latoc" loading="lazy" />
+              <div class="speaker-overlay"></div>
+            </div>
+            <div class="speaker-meta">
+              <h3>Atty. Richard Paat Palpal-Latoc</h3>
+              <p>Chairperson, Commission on Human Rights</p>
+            </div>
+          </article>
+
+          <article class="speaker-card" tabindex="0">
+            <div class="speaker-media">
+              <img src="/v_boontinand.jpg" alt="Dr. Vachararutai Boontinand" loading="lazy" />
+              <div class="speaker-overlay"></div>
+            </div>
+            <div class="speaker-meta">
+              <h3>Dr. Vachararutai Boontinand</h3>
+              <p>Convenor, ASEAN Network, Human Rights Education
+                Mahidol University, Thailand</p>
+            </div>
+          </article>
+          <article class="speaker-card" tabindex="0">
+            <div class="speaker-media">
+              <img src="/m_andresen.jpg" alt="Prof. Dr. Martin Andresen" loading="lazy" />
+              <div class="speaker-overlay"></div>
+            </div>
+            <div class="speaker-meta">
+              <h3>Prof. Dr. Martin Andresen</h3>
+              <p>School of Criminology, Simon Fraser University</p>
             </div>
           </article>
         </div>
