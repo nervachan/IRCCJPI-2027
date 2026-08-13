@@ -615,7 +615,7 @@
   font-size: 2.2rem;
   font-family: var(--font-display);
   font-weight: 700;
-  color: var(--blue-100);
+  color: var(--blue-500);
   line-height: 1;
   margin-bottom: 0.8rem;
 }
@@ -639,9 +639,9 @@
 ==================================================== */
 .speaker-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.6rem;
-  max-width: 800px;
+  max-width: 1120px;
 }
 
 .speaker-card {
@@ -659,6 +659,34 @@
   transform: translateY(-6px);
   box-shadow: var(--shadow-lg);
   outline: none;
+}
+
+/* Keynote speaker highlight */
+.speaker-card--keynote {
+  border: 2px solid #c9a227;
+  box-shadow: 0 0 0 4px rgba(201, 162, 39, 0.18), var(--shadow-sm);
+}
+
+.speaker-card--keynote:hover,
+.speaker-card--keynote:focus-visible {
+  box-shadow: 0 0 0 4px rgba(201, 162, 39, 0.28), var(--shadow-lg);
+}
+
+.speaker-badge {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  z-index: 2;
+  padding: 0.32rem 0.7rem;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #4a3708;
+  background: linear-gradient(135deg, #f4d772 0%, #c9a227 100%);
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .speaker-media {
@@ -686,7 +714,57 @@
 }
 
 .speaker-meta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
   padding: 1.2rem 1.4rem 1.5rem;
+}
+
+.speaker-meta__text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* Flag slot — reserved area on the right (flag image added later) */
+.speaker-flag {
+  flex: 0 0 auto;
+  width: 80px;
+  height: 45px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--gray-50, #f2f6fb);
+  box-shadow: var(--shadow-sm);
+}
+
+.speaker-flag img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Placeholder shown until a real flag <img> is dropped into the slot */
+.speaker-flag:empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: dashed;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--gray-50, #f2f6fb),
+    var(--gray-50, #f2f6fb) 6px,
+    #e6eef8 6px,
+    #e6eef8 12px
+  );
+}
+
+.speaker-flag:empty::after {
+  content: "\1F3F3";
+  font-size: 1rem;
+  line-height: 1;
+  opacity: 0.55;
 }
 
 .speaker-meta h3 {
@@ -1288,6 +1366,8 @@
     gap: 2rem;
   }
 
+  .speaker-grid { grid-template-columns: repeat(2, 1fr); }
+
   .submission__hero {
     grid-template-columns: 1fr;
     padding-top: 100px;
@@ -1347,6 +1427,7 @@
   }
 
   .cards { grid-template-columns: 1fr; }
+  .speaker-grid { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {

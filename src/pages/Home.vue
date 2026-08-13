@@ -58,6 +58,7 @@
           <img src="/rights2life-logo.png" alt="Rights2Life" loading="lazy" />
           <img src="/ccje_logo.png" alt="CCJE" loading="lazy" />
           <img src="/CHR_Logo.png" alt="CHR" loading="lazy" />
+          <img src="/PCAP_Logo.jpg" alt="PCAP" loading="lazy" />
         </div>
       </div>
 
@@ -232,8 +233,12 @@
               <div class="speaker-overlay"></div>
             </div>
             <div class="speaker-meta">
-              <h3>Prof. Dr. Christophe Vandeviver</h3>
-              <p>Ghent University</p>
+              <div class="speaker-meta__text">
+                <h3>Prof. Dr. Christophe Vandeviver</h3>
+                <p>Department of Criminology, Criminal Law and Social Law, Faculty of Law and Criminology, Ghent University.</p>
+              </div>
+              <div class="speaker-flag" aria-hidden="true"><img src="/belgium_flag.png" alt="Belgium flag"/></div>
+
             </div>
           </article>
           <article class="speaker-card" tabindex="0">
@@ -242,8 +247,11 @@
               <div class="speaker-overlay"></div>
             </div>
             <div class="speaker-meta">
-              <h3>Prof. Dr. Jelle Janssens</h3>
-              <p>Ghent University</p>
+              <div class="speaker-meta__text">
+                <h3>Prof. Dr. Jelle Janssens</h3>
+                <p>Department of Criminology, Criminal Law and Social Law, Faculty of Law and Criminology, Ghent University.</p>
+              </div>
+              <div class="speaker-flag" aria-hidden="true"><img src="/belgium_flag.png" alt="Belgium flag"/></div>
             </div>
           </article>
           <article class="speaker-card" tabindex="0">
@@ -252,19 +260,26 @@
               <div class="speaker-overlay"></div>
             </div>
             <div class="speaker-meta">
-              <h3>Prof. Dr. Sheila Royo-Maxwell</h3>
-              <p>Department of Criminology, School of Criminal Justice - Michigan State University</p>
+              <div class="speaker-meta__text">
+                <h3>Prof. Dr. Sheila Royo-Maxwell</h3>
+                <p>Department of Criminology, School of Criminal Justice - Michigan State University</p>
+              </div>
+              <div class="speaker-flag" aria-hidden="true"><img src="/united_states_flag.png" alt="United States flag"/></div>
             </div>
           </article>
 
-          <article class="speaker-card" tabindex="0">
+          <article class="speaker-card speaker-card--keynote" tabindex="0">
             <div class="speaker-media">
               <img src="/c_veliko.png" alt="Ms. Cynthia Veliko" loading="lazy" />
               <div class="speaker-overlay"></div>
+              <span class="speaker-badge">Keynote Speaker</span>
             </div>
             <div class="speaker-meta">
-              <h3>Ms. Cynthia Veliko</h3>
-              <p>Regional Representative South-East Asia, OHCHR</p>
+              <div class="speaker-meta__text">
+                <h3>Ms. Cynthia Veliko</h3>
+                <p>Acting Regional Director of the Asia and Pacific Section, United Nations – Office of the High Commissioner for Human Rights, Thailand.</p>
+              </div>
+              <div class="speaker-flag" aria-hidden="true"><img src="/thailand_flag.png" alt="Thailand flag"/></div>
             </div>
           </article>
 
@@ -274,8 +289,11 @@
               <div class="speaker-overlay"></div>
             </div>
             <div class="speaker-meta">
-              <h3>Atty. Richard Paat Palpal-Latoc</h3>
-              <p>Chairperson, Commission on Human Rights</p>
+              <div class="speaker-meta__text">
+                <h3>Atty. Richard Paat Palpal-Latoc</h3>
+                <p>Chairperson, Commission on Human Rights</p>
+              </div>
+              <div class="speaker-flag" aria-hidden="true"><img src="/philippine_flag.svg" alt="Philippines flag"/></div>
             </div>
           </article>
 
@@ -285,9 +303,12 @@
               <div class="speaker-overlay"></div>
             </div>
             <div class="speaker-meta">
-              <h3>Dr. Vachararutai Boontinand</h3>
-              <p>Convenor, ASEAN Network, Human Rights Education
-                Mahidol University, Thailand</p>
+              <div class="speaker-meta__text">
+                <h3>Dr. Vachararutai Boontinand</h3>
+                <p>Convenor, ASEAN Network, Human Rights Education
+                  Mahidol University, Thailand</p>
+              </div>
+              <div class="speaker-flag" aria-hidden="true"><img src="/thailand_flag.png" alt="Thailand flag"/></div>
             </div>
           </article>
           <article class="speaker-card" tabindex="0">
@@ -296,8 +317,24 @@
               <div class="speaker-overlay"></div>
             </div>
             <div class="speaker-meta">
-              <h3>Prof. Dr. Martin Andresen</h3>
-              <p>School of Criminology, Simon Fraser University</p>
+              <div class="speaker-meta__text">
+                <h3>Prof. Dr. Martin Andresen</h3>
+                <p>School of Criminology, Simon Fraser University</p>
+              </div>
+              <div class="speaker-flag" aria-hidden="true"><img src="/canada_flag.webp" alt="Canada Flag"/></div>
+            </div>
+          </article>
+           <article class="speaker-card" tabindex="0">
+            <div class="speaker-media">
+              <img src="/t_hodgkinson.jpg" alt="Prof. Dr. Tarah Hodgekinson" loading="lazy" />
+              <div class="speaker-overlay"></div>
+            </div>
+            <div class="speaker-meta">
+              <div class="speaker-meta__text">
+                <h3>Prof. Dr. Tarah Hodgekinson</h3>
+                <p>Department of Criminology, Faculty of Human and Social Sciences, Wilfrid Laurier University, Canada</p>
+              </div>
+              <div class="speaker-flag" aria-hidden="true"><img src="/canada_flag.webp" alt="Canada Flag"/></div>
             </div>
           </article>
         </div>
