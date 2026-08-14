@@ -672,9 +672,9 @@
 
 .speaker-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.6rem;
-  max-width: 862px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.4rem;
+  max-width: 1140px;
   margin: 0 auto;
 }
 
