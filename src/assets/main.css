@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Spectral:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap');
 @import './base.css';
 
 /* ====================================================
@@ -513,6 +513,14 @@
   line-height: 1.7;
 }
 
+/* Keep the Speakers heading on a single line on wide screens */
+@media (min-width: 1100px) {
+  #speakers .section__header h2 {
+    max-width: none;
+    white-space: nowrap;
+  }
+}
+
 /* two-column layout helper */
 .section__two-col {
   display: grid;
@@ -637,6 +645,31 @@
 /* ====================================================
    SPEAKERS
 ==================================================== */
+/* Featured keynote — larger card centered above the grid */
+.speaker-featured {
+  display: flex;
+  justify-content: center;
+  max-width: 1120px;
+  margin-bottom: 2rem;
+}
+
+.speaker-featured .speaker-card {
+  width: 100%;
+  max-width: 560px;
+}
+
+.speaker-featured .speaker-media {
+  aspect-ratio: 16 / 10;
+}
+
+.speaker-featured .speaker-meta h3 {
+  font-size: 1.35rem;
+}
+
+.speaker-featured .speaker-meta p {
+  font-size: 0.98rem;
+}
+
 .speaker-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -711,6 +744,33 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(to top, rgba(6,43,94,0.85) 0%, transparent 55%);
+}
+
+/* Country label — revealed just below the image on hover */
+.speaker-country {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.5rem 1.4rem;
+  text-align: center;
+  font-family: 'Playfair Display', 'Spectral', Georgia, serif;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  color: #fff;
+  background: rgba(6, 43, 94, 0.9);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.28s var(--ease-out), transform 0.28s var(--ease-out);
+  pointer-events: none;
+}
+
+.speaker-card:hover .speaker-country,
+.speaker-card:focus-visible .speaker-country {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .speaker-meta {

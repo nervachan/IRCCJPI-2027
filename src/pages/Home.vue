@@ -226,11 +226,30 @@
           <p class="section__eyebrow">Featured Speakers</p>
           <h2>Voices shaping rights-centered criminology</h2>
         </div>
+        <div class="speaker-featured">
+          <article class="speaker-card speaker-card--keynote" tabindex="0">
+            <div class="speaker-media">
+              <img src="/c_veliko.png" alt="Ms. Cynthia Veliko" loading="lazy" />
+              <div class="speaker-overlay"></div>
+              <span class="speaker-badge">Keynote Speaker</span>
+              <span class="speaker-country">Thailand</span>
+            </div>
+            <div class="speaker-meta">
+              <div class="speaker-meta__text">
+                <h3>Ms. Cynthia Veliko</h3>
+                <p>Acting Regional Director of the Asia and Pacific Section, United Nations – Office of the High Commissioner for Human Rights, Thailand.</p>
+              </div>
+              <div class="speaker-flag" aria-hidden="true"><img src="/thailand_flag.png" alt="Thailand flag"/></div>
+            </div>
+          </article>
+        </div>
+
         <div class="speaker-grid">
           <article class="speaker-card" tabindex="0">
             <div class="speaker-media">
               <img src="/c_vandeviewer.jpg" alt="Prof. Dr. Christophe Vandeviver" loading="lazy" />
               <div class="speaker-overlay"></div>
+              <span class="speaker-country">Belgium</span>
             </div>
             <div class="speaker-meta">
               <div class="speaker-meta__text">
@@ -245,6 +264,7 @@
             <div class="speaker-media">
               <img src="/d_janssens.jpg" alt="Prof. Dr. Jelle Janssens" loading="lazy" />
               <div class="speaker-overlay"></div>
+              <span class="speaker-country">Belgium</span>
             </div>
             <div class="speaker-meta">
               <div class="speaker-meta__text">
@@ -258,6 +278,7 @@
             <div class="speaker-media">
               <img src="/s_maxwell.jpg" alt="Prof. Dr. Sheila Royo-Maxwell" loading="lazy" />
               <div class="speaker-overlay"></div>
+              <span class="speaker-country">United States</span>
             </div>
             <div class="speaker-meta">
               <div class="speaker-meta__text">
@@ -268,25 +289,11 @@
             </div>
           </article>
 
-          <article class="speaker-card speaker-card--keynote" tabindex="0">
-            <div class="speaker-media">
-              <img src="/c_veliko.png" alt="Ms. Cynthia Veliko" loading="lazy" />
-              <div class="speaker-overlay"></div>
-              <span class="speaker-badge">Keynote Speaker</span>
-            </div>
-            <div class="speaker-meta">
-              <div class="speaker-meta__text">
-                <h3>Ms. Cynthia Veliko</h3>
-                <p>Acting Regional Director of the Asia and Pacific Section, United Nations – Office of the High Commissioner for Human Rights, Thailand.</p>
-              </div>
-              <div class="speaker-flag" aria-hidden="true"><img src="/thailand_flag.png" alt="Thailand flag"/></div>
-            </div>
-          </article>
-
           <article class="speaker-card" tabindex="0">
             <div class="speaker-media">
               <img src="/r_palpal-latoc.jpg" alt="Atty. Richard Paat Palpal-Latoc" loading="lazy" />
               <div class="speaker-overlay"></div>
+              <span class="speaker-country">Philippines</span>
             </div>
             <div class="speaker-meta">
               <div class="speaker-meta__text">
@@ -301,6 +308,7 @@
             <div class="speaker-media">
               <img src="/v_boontinand.jpg" alt="Dr. Vachararutai Boontinand" loading="lazy" />
               <div class="speaker-overlay"></div>
+              <span class="speaker-country">Thailand</span>
             </div>
             <div class="speaker-meta">
               <div class="speaker-meta__text">
@@ -315,6 +323,7 @@
             <div class="speaker-media">
               <img src="/m_andresen.jpg" alt="Prof. Dr. Martin Andresen" loading="lazy" />
               <div class="speaker-overlay"></div>
+              <span class="speaker-country">Canada</span>
             </div>
             <div class="speaker-meta">
               <div class="speaker-meta__text">
@@ -328,6 +337,7 @@
             <div class="speaker-media">
               <img src="/t_hodgkinson.jpg" alt="Prof. Dr. Tarah Hodgekinson" loading="lazy" />
               <div class="speaker-overlay"></div>
+              <span class="speaker-country">Canada</span>
             </div>
             <div class="speaker-meta">
               <div class="speaker-meta__text">
