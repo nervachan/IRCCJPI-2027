@@ -649,13 +649,13 @@
 .speaker-featured {
   display: flex;
   justify-content: center;
-  max-width: 1120px;
-  margin-bottom: 2rem;
+  max-width: 862px;
+  margin: 0 auto 2rem;
 }
 
 .speaker-featured .speaker-card {
   width: 100%;
-  max-width: 560px;
+  max-width: 431px;
 }
 
 .speaker-featured .speaker-media {
@@ -674,7 +674,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.6rem;
-  max-width: 1120px;
+  max-width: 862px;
+  margin: 0 auto;
 }
 
 .speaker-card {
